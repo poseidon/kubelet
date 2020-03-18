@@ -1,4 +1,4 @@
-# Kubelet
+# Kubelet [![Docker Repository on Quay](https://quay.io/repository/poseidon/kubelet/status "Image Repository on Quay")](https://quay.io/repository/poseidon/kubelet)
 
 `kubelet` provides a [container image](https://quay.io/repository/poseidon/kubelet) packaging the upstream Kubernetes `kubelet` and dependencies, for use on container-optimized OS distributions.
 
