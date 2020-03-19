@@ -15,7 +15,6 @@ FROM k8s.gcr.io/debian-iptables:v12.0.1
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 RUN clean-install \
-  #arptables \
   bash \
   ca-certificates \
   ceph-common \
@@ -23,11 +22,11 @@ RUN clean-install \
   e2fsprogs \
   xfsprogs \
   ethtool \
-  #git \
+  git \
   glusterfs-client \
   iproute2 \
   jq \
-  #openssh-client \
+  openssh-client \
   nfs-common \
   socat \
   udev \
