@@ -22,11 +22,9 @@ RUN clean-install \
   e2fsprogs \
   xfsprogs \
   ethtool \
-  git \
   glusterfs-client \
   iproute2 \
   jq \
-  openssh-client \
   nfs-common \
   socat \
   udev \

@@ -22,11 +22,6 @@ Kubelet also requires:
 * `nfs-common` - https://github.com/kubernetes/kubernetes/pull/30320
 * `udev` (`udevadm`)- https://github.com/kubernetes/kubernetes/pull/61357
 
-The following are only required for gitRepo Volumes (deprecated):
-
-* `git` - https://github.com/kubernetes/kubernetes/pull/23407
-* `openssh-client` - https://github.com/kubernetes/kubernetes/pull/54250
-
 ### kubectl
 
 `kubectl` (no dependencies) is also included for convenience (e.g. use already pulled Kubelet image to `kubectl delete node` on preemption)
