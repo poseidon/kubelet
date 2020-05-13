@@ -11,7 +11,7 @@ RUN apk add curl && \
   tar xzf node.tar.gz kubernetes/node/bin/kubectl kubernetes/node/bin/kubelet
 
 
-FROM k8s.gcr.io/debian-iptables:v12.0.1
+FROM us.gcr.io/k8s-artifacts-prod/build-image/debian-iptables:v12.1.0
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 RUN clean-install \
