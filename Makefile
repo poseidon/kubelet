@@ -12,13 +12,11 @@ run:
 
 .PHONY: image
 image:
-	buildah bud -t $(LOCAL_REPO):$(VERSION) .
+	buildah bud -f Dockerfile.amd64 -t $(LOCAL_REPO):$(VERSION) .
 	buildah tag $(LOCAL_REPO):$(VERSION) $(LOCAL_REPO):latest
 
 .PHONY: push
 push:
 	buildah tag $(LOCAL_REPO):$(VERSION) $(IMAGE_REPO):$(VERSION)
-	buildah tag $(LOCAL_REPO):$(VERSION) $(IMAGE_REPO):latest
 	buildah push docker://$(IMAGE_REPO):$(VERSION)
-	buildah push docker://$(IMAGE_REPO):latest
 
