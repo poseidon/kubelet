@@ -1,4 +1,4 @@
-VERSION=$(shell git describe --tags --match=v* --always --abbrev=0 --dirty)
+VERSION=$(shell git describe --tags --match=v* --always --dirty)
 LOCAL_REPO?=dghubble/kubelet
 IMAGE_REPO?=quay.io/dghubble/kubelet
 
