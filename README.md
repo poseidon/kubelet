@@ -1,8 +1,18 @@
-# Kubelet [![Docker Repository on Quay](https://quay.io/repository/poseidon/kubelet/status "Image Repository on Quay")](https://quay.io/repository/poseidon/kubelet)
+# Kubelet [![Docker Repository on Quay](https://quay.io/repository/poseidon/kubelet/status "Image Repository on Quay")](https://quay.io/repository/poseidon/kubelet) [![Dockerhub](https://img.shields.io/badge/container-dockerhub-blue)](https://hub.docker.com/r/psdn/kubelet)
 
-`kubelet` provides a [container image](https://quay.io/repository/poseidon/kubelet) packaging the upstream Kubernetes `kubelet` and dependencies, for use on container-optimized OS distributions.
+`kubelet` provides a [container image](https://quay.io/repository/poseidon/kubelet) packaging the upstream Kubernetes `kubelet` and dependencies, for use on container-optimized OS distributions. `kubelet` is a component of the [Typhoon](https://github.com/poseidon/typhoon) Kubernetes distribution.
 
-`kubelet` is a low-level component of the [Typhoon](https://github.com/poseidon/typhoon) Kubernetes distribution.
+## Repositories
+
+Typhoon publishes Kubelet container images to repositories ([detailed policy](https://typhoon.psdn.io/topics/security/#container-images)).
+
+* [quay.io/poseidon/kubelet](https://quay.io/repository/poseidon/kubelet) (official)
+* [docker.io/psdn/kubelet](https://hub.docker.com/repository/docker/psdn/kubelet) (redundant)
+
+Two tag styles indicate the build strategy:
+
+* Single and multi-arch images are published by Typhoon infrastructure (e.g. `v1.18.3`, `v1.18.3-amd64`, `v1.18.3-arm64`, `v1.18.3-2-g23228e6-amd64`, `v1.18.3-2-g23228e6-arm64`)
+* Quay or Docker autobuilt images (e.g. `build-SHA` on Quay, `build-master` on Dockerhub))
 
 ## Packages
 
@@ -25,4 +35,3 @@ Kubelet also requires:
 ### kubectl
 
 `kubectl` (no dependencies) is also included for convenience (e.g. use already pulled Kubelet image to `kubectl delete node` on preemption)
-
