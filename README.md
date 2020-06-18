@@ -7,11 +7,11 @@
 Typhoon publishes Kubelet container images to repositories ([detailed policy](https://typhoon.psdn.io/topics/security/#container-images)).
 
 * [quay.io/poseidon/kubelet](https://quay.io/repository/poseidon/kubelet) (official)
-* [docker.io/psdn/kubelet](https://hub.docker.com/repository/docker/psdn/kubelet) (redundant)
+* [docker.io/psdn/kubelet](https://hub.docker.com/repository/docker/psdn/kubelet) (fallback)
 
 Two tag styles indicate the build strategy:
 
-* Single and multi-arch images are published by Typhoon infrastructure (e.g. `v1.18.3`, `v1.18.3-amd64`, `v1.18.3-arm64`, `v1.18.3-2-g23228e6-amd64`, `v1.18.3-2-g23228e6-arm64`)
+* Single and multi-arch images are published by Typhoon infrastructure (e.g. `v1.18.4`, `v1.18.4-amd64`, `v1.18.4-arm64`, `v1.18.4-2-g23228e6-amd64`, `v1.18.4-2-g23228e6-arm64`)
 * Quay or Docker autobuilt images (e.g. `build-SHA` on Quay, `build-master` on Dockerhub))
 
 ## Packages
