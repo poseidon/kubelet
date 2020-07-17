@@ -31,6 +31,7 @@ Kubelet also requires:
 * `kmod` (`modprobe`) - https://github.com/kubernetes/kubernetes/pull/53642
 * `nfs-common` - https://github.com/kubernetes/kubernetes/pull/30320
 * `udev` (`udevadm`)- https://github.com/kubernetes/kubernetes/pull/61357
+* `iproute2` - https://github.com/kubernetes/kubernetes/pull/92581
 
 ### kubectl
 
