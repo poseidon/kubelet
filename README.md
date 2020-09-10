@@ -12,7 +12,7 @@ Typhoon publishes Kubelet container images to repositories ([detailed policy](ht
 Two tag styles indicate the build strategy:
 
 * Single and multi-arch images are published by Typhoon infrastructure (e.g. `v1.18.4`, `v1.18.4-amd64`, `v1.18.4-arm64`)
-* Quay or Docker autobuilt images (e.g. `build-SHA` on Quay, `build-master` on Dockerhub)
+* Quay or Docker autobuilt images (e.g. `build-SHA` on Quay, `release-TAG` on Dockerhub)
 
 ## Packages
 
