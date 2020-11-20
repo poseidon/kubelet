@@ -1,22 +1,15 @@
 VERSION=$(shell git describe --tags --match=v* --always --dirty)
-LOCAL_REPO?=dghubble/kubelet
-IMAGE_REPO?=quay.io/dghubble/kubelet
 
-all: image
+LOCAL_REPO?=poseidon/kubelet
+IMAGE_REPO?=quay.io/poseidon/kubelet
 
-.PHONY: run
-run:
-	podman run -it \
-		--entrypoint /bin/sh \
-		dghubble/kubelet
+image: \
+	image-amd64 \
+	image-arm64
 
-.PHONY: image
-image:
-	buildah bud -f Dockerfile.amd64 -t $(LOCAL_REPO):$(VERSION) .
-	buildah tag $(LOCAL_REPO):$(VERSION) $(LOCAL_REPO):latest
-
-.PHONY: push
-push:
-	buildah tag $(LOCAL_REPO):$(VERSION) $(IMAGE_REPO):$(VERSION)
-	buildah push docker://$(IMAGE_REPO):$(VERSION)
+image-%:
+	buildah bud -f Dockerfile.$* \
+		-t $(LOCAL_REPO):$(VERSION)-$* \
+		--arch $* --override-arch $* \
+		--format=docker .
 
