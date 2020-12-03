@@ -1,4 +1,4 @@
-# Kubelet [![Docker Repository on Quay](https://quay.io/repository/poseidon/kubelet/status "Image Repository on Quay")](https://quay.io/repository/poseidon/kubelet) [![Dockerhub](https://img.shields.io/badge/container-dockerhub-blue)](https://hub.docker.com/r/psdn/kubelet)
+# Kubelet [![Quay](https://img.shields.io/badge/container-quay-green)](https://quay.io/repository/poseidon/kubelet) [![Dockerhub](https://img.shields.io/badge/container-dockerhub-blue)](https://hub.docker.com/r/psdn/kubelet)
 
 `kubelet` provides a [container image](https://quay.io/repository/poseidon/kubelet) packaging the upstream Kubernetes `kubelet` and dependencies, for use on container-optimized OS distributions. `kubelet` is a component of the [Typhoon](https://github.com/poseidon/typhoon) Kubernetes distribution.
 
