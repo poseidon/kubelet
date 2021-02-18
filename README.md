@@ -34,4 +34,4 @@ Kubelet also requires:
 
 ### kubectl
 
-`kubectl` (no dependencies) is also included for convenience (e.g. use pre-pulled Kubelet image to `kubectl delete node` on preemption)
+`kubectl` (no dependencies) is also included for convenience (e.g. use pre-pulled Kubelet image to `kubectl delete node` on preemption).
