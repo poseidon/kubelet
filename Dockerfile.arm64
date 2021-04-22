@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.13 AS fetcher
+FROM quay.io/amis/alpine:3.13 AS fetcher
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 ARG KUBELET=v1.19.10
