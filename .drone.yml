@@ -1,0 +1,17 @@
+pipeline:
+  build-image:
+    when:
+      event: [push]
+    image: plugins/docker
+    repo: registry.usw.co/poseidon/kubelet
+    tags:
+      - ${DRONE_COMMIT_SHA}
+  build-image-tagged:
+    when:
+      event: tag
+      branch: master
+    image: plugins/docker
+    repo: registry.usw.co/poseidon/kubelet
+    tags:
+      - ${DRONE_TAG}
+      - latest
