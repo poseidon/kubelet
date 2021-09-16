@@ -1,9 +1,9 @@
 FROM docker.io/alpine:3.14 AS fetcher
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
-ARG KUBELET=v1.22.1
+ARG KUBELET=v1.22.2
 ARG ARCH=arm64
-ARG SHA=eb6a5cb5270a662a79302472a347a5486b3e0689c0c8ea0ceb62e83f72c043dc3b15ee3d5ec40790a1754748950208d8b5818b3f1d64e44a881720a78f50cc7e
+ARG SHA=9b35d16a1d2760a017564f6d09ec17b0aa2ed2b4cd62065d9aa0fe760d080fa8d64feb4ab7fb54eda1b8a1a760b4ee58ac36ad1c134b4adefe3e45872209816e
 
 RUN apk add curl && \
   curl -L https://dl.k8s.io/${KUBELET}/kubernetes-node-linux-${ARCH}.tar.gz -o node.tar.gz && \
@@ -11,7 +11,7 @@ RUN apk add curl && \
   tar xzf node.tar.gz kubernetes/node/bin/kubectl kubernetes/node/bin/kubelet
 
 
-FROM us.gcr.io/k8s-artifacts-prod/build-image/debian-iptables:buster-v1.6.6
+FROM us.gcr.io/k8s-artifacts-prod/build-image/debian-iptables:buster-v1.6.7
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 RUN clean-install \
