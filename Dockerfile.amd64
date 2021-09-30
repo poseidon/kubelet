@@ -11,9 +11,10 @@ RUN apk add curl && \
   tar xzf node.tar.gz kubernetes/node/bin/kubectl kubernetes/node/bin/kubelet
 
 
-FROM us.gcr.io/k8s-artifacts-prod/build-image/debian-iptables:buster-v1.6.7
+FROM us.gcr.io/k8s-artifacts-prod/build-image/debian-iptables:bullseye-v1.0.0
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
+RUN clean-install --allow-change-held-packages libcap2
 RUN clean-install \
   bash \
   ca-certificates \
