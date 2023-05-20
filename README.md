@@ -1,6 +1,7 @@
 # Kubelet
 [![Quay](https://img.shields.io/badge/container-quay-green)](https://quay.io/repository/poseidon/kubelet)
 [![Dockerhub](https://img.shields.io/badge/container-dockerhub-blue)](https://hub.docker.com/r/psdn/kubelet)
+[![Workflow](https://github.com/poseidon/kubelet/actions/workflows/build.yaml/badge.svg)](https://github.com/poseidon/kubelet/actions/workflows/build.yaml?query=branch%3Amain)
 [![Sponsors](https://img.shields.io/github/sponsors/poseidon?logo=github)](https://github.com/sponsors/poseidon)
 [![Mastodon](https://img.shields.io/badge/follow-news-6364ff?logo=mastodon)](https://fosstodon.org/@typhoon)
 
