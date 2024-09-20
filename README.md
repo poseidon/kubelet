@@ -1,6 +1,5 @@
 # Kubelet
 [![Quay](https://img.shields.io/badge/container-quay-green)](https://quay.io/repository/poseidon/kubelet)
-[![Dockerhub](https://img.shields.io/badge/container-dockerhub-blue)](https://hub.docker.com/r/psdn/kubelet)
 [![Workflow](https://github.com/poseidon/kubelet/actions/workflows/build.yaml/badge.svg)](https://github.com/poseidon/kubelet/actions/workflows/build.yaml?query=branch%3Amain)
 [![Sponsors](https://img.shields.io/github/sponsors/poseidon?logo=github)](https://github.com/sponsors/poseidon)
 [![Mastodon](https://img.shields.io/badge/follow-news-6364ff?logo=mastodon)](https://fosstodon.org/@typhoon)
@@ -12,7 +11,6 @@
 Typhoon publishes Kubelet container images to repositories ([detailed policy](https://typhoon.psdn.io/topics/security/#container-images)).
 
 * [quay.io/poseidon/kubelet](https://quay.io/repository/poseidon/kubelet) (official)
-* [docker.io/psdn/kubelet](https://hub.docker.com/repository/docker/psdn/kubelet) (fallback)
 
 Two tag styles indicate the build strategy:
 
