@@ -1,9 +1,9 @@
 FROM docker.io/alpine:3.22 AS fetcher
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
-ARG KUBELET=v1.33.3
+ARG KUBELET=v1.34.1
 ARG ARCH=arm64
-ARG SHA=a631b6236485979c98f1a99553e55e4f6a77bc6fcad444490095872a3516b761ad5097297dd730f1b8fb27bd613af4eea0d4fefc3379fa4724bf4915f8576ecb
+ARG SHA=efe54933eb5e7e6b44c76efe0b4cec911340793ef2eafdd595593fb2537e5704429d3a291793cb69ad459fe14058da491a29a12d963ba34ee4c1475cc0799b0f
 
 RUN apk add curl && \
   curl -L https://dl.k8s.io/${KUBELET}/kubernetes-node-linux-${ARCH}.tar.gz -o node.tar.gz && \
