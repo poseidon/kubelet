@@ -19,7 +19,7 @@ Two tag styles indicate the build strategy:
 
 ## Packages
 
-The [debian-iptables](https://github.com/kubernetes/kubernetes/tree/master/build/debian-iptables) base provides `conntrack`, `ebtables`, `ipset`, `kmod`, and `netbase`.
+The [debian-iptables](https://github.com/kubernetes/k8s.io/blob/main/registry.k8s.io/images/k8s-staging-build-image/images.yaml) base provides `conntrack`, `ebtables`, `ipset`, `kmod`, and `netbase`.
 
 Kubelet also requires:
 
