@@ -1,9 +1,9 @@
 FROM docker.io/alpine:3.23 AS fetcher
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
-ARG KUBELET=v1.35.4
+ARG KUBELET=v1.36.0
 ARG ARCH=arm64
-ARG SHA=754ed5fc01a1675b7aad31feb4b4a68ebde1d63411e2565249cac9cc7b57631652808f3ec2fcc3530c9a5b2dbd39cef305b4f286c39f35e70ede616458312b3b
+ARG SHA=10a4c3660e6e19fae998b04345dbe42711e61745bf374405c33e8604335b12ff55ce7b68f8a0d67d1f7ce4519f706fbd8d80781b7128369fe047c38915e8d189
 
 RUN apk add curl && \
   curl -L https://dl.k8s.io/${KUBELET}/kubernetes-node-linux-${ARCH}.tar.gz -o node.tar.gz && \
@@ -11,7 +11,7 @@ RUN apk add curl && \
   tar xzf node.tar.gz kubernetes/node/bin/kubectl kubernetes/node/bin/kubelet
 
 
-FROM registry.k8s.io/build-image/debian-iptables:bullseye-v1.5.7
+FROM registry.k8s.io/build-image/debian-iptables:bookworm-v1.0.0
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 RUN clean-install --allow-change-held-packages libcap2
