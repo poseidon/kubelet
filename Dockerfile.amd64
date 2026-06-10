@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.23 AS fetcher
+FROM docker.io/alpine:3.24 AS fetcher
 LABEL maintainer="Dalton Hubble <dghubble@gmail.com>"
 
 ARG KUBELET=v1.36.1
